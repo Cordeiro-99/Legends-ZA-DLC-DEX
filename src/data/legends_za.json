@@ -1384,5 +1384,711 @@
     "name": "Diancie",
     "type": ["Rock", "Fairy"],
     "sprite": "https://img.pokemondb.net/sprites/home/shiny/diancie.png"
-  }
+  } ,
+  {
+    "id": 232,
+    "name": "Hoopa",
+    "type": ["Psychic", "Ghost"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/hoopa.png"  
+  } , 
+  {
+    "id": 233,
+    "name": "Mankey",
+    "type": ["Fighting"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/mankey.png"
+  },
+  {
+    "id": 234,
+    "name": "Primeape",
+    "type": ["Fighting"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/primeape.png"
+  },
+  {
+    "id":235,
+    "name": "Annihilape",
+    "type": ["Fighting", "Ghost"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/annihilape.png"
+  },
+  {
+    "id": 236,
+    "name": "Meowth",
+    "type": ["Normal"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/meowth.png"
+  },
+  {
+    "id":237,
+    "name": "Persian",
+    "type": ["Normal"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/persian.png"
+  } ,
+  {
+    "id": 238,
+    "name": "Perrserker",
+    "type": ["Steel"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/perrserker.png"
+  },
+  {
+    "id": 239,
+    "name": "Farfetch'd",
+    "type": ["Normal", "Flying"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/farfetchd.png"
+  },
+  {
+    "id": 240,
+    "name": "Sirfetch'd",
+    "type": ["Fighting", "Flying"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/sirfetchd.png"
+  },
+  {
+    "id": 241,
+    "name": "cubone",
+    "type": ["Ground"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/cubone.png"
+  },
+  {
+    "id": 242,
+    "name": "marowak",
+    "type": ["Ground"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/marowak.png"
+  },
+  {
+    "id": 243,
+    "name": "porygon",
+    "type": ["Normal"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/porygon.png"
+  },
+  {
+    "id": 244,
+    "name": "porygon2",
+    "type": ["Normal"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/porygon2.png"
+  },
+  {
+    "id": 245,
+    "name": "porygon-z",
+    "type": ["Normal"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/porygon-z.png"
+  },
+  { 
+    "id":246,
+    "name": "Capsakid",
+    "type": ["Grass"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/capsakid.png"
+  },
+  {
+    "id":247,
+    "name": "Scovillain",
+    "type": ["Grass", "Fire"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/scovillain.png"
+  },
+  {
+    "id":248,
+    "name": "Tinkatink",
+    "type": ["Steel", "Fairy"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/tinkatink.png"
+  },
+  {
+    "id":249,
+    "name": "Tinkatuff",
+    "type": ["Steel", "Fairy"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/tinkatuff.png"
+  },
+  {
+    "id":250,
+    "name": "Tinkatonk",
+    "type": ["Steel", "Fairy"],
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/tinkatonk.png"
+  },
+  {"id":251,
+  "name": "Cyclizar",
+  "type": ["Dragon", "Normal"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/cyclizar.png"
+},
+{
+  "id":252,
+  "name": "Rotom",
+  "type": ["Electric", "Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/rotom.png"
+},
+{
+  "id":253,
+  "name":"Greavard",
+  "type": ["Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/greavard.png"
+},
+{
+  "id":254,
+  "name": "Houndstone",
+  "type": ["Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/houndstone.png"
+},
+{
+  "id":255,
+  "name":"Sandygast",
+  "type": ["Ghost, Ground"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/sandygast.png"
+},
+{
+  "id":256,
+  "name": "Palossand",
+  "type": ["Ghost, Ground"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/palossand.png"
+},
+{
+  "id":257,
+  "name": "Kecleon",
+  "type": ["Normal"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/kecleon.png"
+},
+{
+  "id":258,
+  "name": "Flamingo",
+  "type": ["Flying", "Fighting"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/flamingo.png"
+},
+{
+  "id":259,
+  "name":"Cryogonal",
+  "type": ["Ice"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/cryogonal.png"
+},
+{
+  "id":260,
+  "name": "Dondozo",
+  "type": ["Water"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/dondozo.png"
+},
+{
+  "id":261,
+  "name": "Tatsugiri",
+  "type": ["Dragon", "Water"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/tatsugiri.png"
+},
+{
+  "id":262,
+  "name": "Frigibax",
+  "type": ["Dragon", "Ice"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/frigibax.png"
+},
+{
+  "id":263,
+  "name": "Arctibax",
+  "type": ["Dragon", "Ice"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/arctibax.png"
+},
+{
+  "id":264,
+  "name": "Baxcalibur",
+  "type": ["Dragon", "Ice"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/baxcalibur.png"
+},
+{
+  "id":265,
+  "name": "Gimmighoul",
+  "type": ["Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/gimmighoul.png"
+},
+{
+  "id":266,
+  "name": "Gholdengo",
+  "type": ["Steel", "Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/gholdengo.png"
+},
+{
+  "id":267,
+  "name":"Qwilfish",
+  "type": ["Water", "Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/qwilfish.png"
+},
+{
+  "id":268,
+  "name":"Overqwil",
+  "type": ["Water", "Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/overqwil.png"
+},
+{
+  "id":269,
+  "name":"Treecko",
+  "type": ["Grass"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/treecko.png"
+},
+{
+  "id":270,
+  "name": "Grovyle",
+  "type": ["Grass"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/grovyle.png"
+},
+{
+  "id":271,
+  "name": "Sceptile",
+  "type": ["Grass"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/sceptile.png"
+},
+{
+  "id":272,
+  "name": "Torchic",
+  "type": ["Fire"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/torchic.png"
+},
+{
+  "id":273,
+  "name": "Combusken",
+  "type": ["Fire", "Fighting"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/combusken.png"
+},
+{
+  "id":274,
+  "name": "Blaziken",
+  "type": ["Fire", "Fighting"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/blaziken.png"
+},
+{
+  "id":275,
+  "name": "Mudkip",
+  "type": ["Water"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/mudkip.png"
+},
+{
+  "id":276,
+  "name": "Marshtomp",
+  "type": ["Water", "Ground"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/marshtomp.png"
+},
+{"id":277,
+"name":"Swampert",
+"type": ["Water", "Ground"],
+"sprite": "https://img.pokemondb.net/sprites/home/shiny/swampert.png"
+},
+{
+  "id":278,
+  "name": "Feebas",
+  "type": ["Water"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/feebas.png"
+},
+{
+  "id":279,
+  "name": "Milotic",
+  "type": ["Water"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/milotic.png"
+},
+{
+  "id":280,
+  "name": "Chingling",
+  "type": ["Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/chingling.png"
+},
+{
+  "id":281,
+  "name": "Chimecho",
+  "type": ["Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/chimecho.png"
+},
+{
+  "id":282,
+  "name":"Indeedee",
+  "type": ["Psychic", "Normal"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/indeedee.png"
+},
+{
+  "id":283,
+  "name":"Purrloin"
+,
+"type": ["Dark"],
+"sprite": "https://img.pokemondb.net/sprites/home/shiny/purrloin.png"
+},
+{
+  "id":284,
+  "name": "Liepard",
+  "type": ["Dark"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/liepard.png"
+},
+{
+  "id":285,
+  "name": "Munna",
+  "type": ["Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/munna.png"
+},
+{
+  "id":286,
+  "name": "Musharna",
+  "type": ["Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/musharna.png"
+},
+{
+  "id":287,
+  "name": "Throh",
+  "type": ["Fighting"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/throh.png"
+},
+{
+  "id":288,
+  "name": "Sawk",
+  "type": ["Fighting"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/sawk.png"
+},
+{
+  "id":289,
+  "name": "Yamask",
+  "type": ["Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/yamask.png"
+},
+{
+  "id":290,
+  "name": "Cofagrigus",
+  "type": ["Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/cofagrigus.png"
+},
+{
+  "id":291,
+  "name": "Runerigus",
+  "type": ["Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/runerigus.png"
+},
+{"id":292,
+"name": "Wimpod",
+"type": ["Bug", "Water"],
+"sprite": "https://img.pokemondb.net/sprites/home/shiny/wimpod.png"
+},
+{
+  "id":293,
+  "name": "Golisopod",
+  "type": ["Bug", "Water"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/golisopod.png"
+},
+{
+  "id":294,
+  "name": "Nickit",
+  "type": ["Dark"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/gnickit.png"
+},
+{
+  "id":295,
+  "name": "Thievul",
+  "type": ["Dark"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/thievul.png"
+},
+{
+"id":296,
+"name": "Clobbopus",
+"type": ["Fighting"],
+"sprite": "https://img.pokemondb.net/sprites/home/shiny/clobbopus.png"
+},
+{
+  "id":297,
+  "name": "Grapploct",
+  "type": ["Fighting"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/grapploct.png"
+},
+{
+  "id":298,
+  "name":"Mimikyu",
+  "type": ["Ghost", "Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/mimikyu.png"
+},
+{
+  "id":299,
+  "name": "Kleavor",
+  "type": ["Bug", "Rock"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/kleavor.png"
+},
+{
+  "id":300,
+  "name": "Morpeko",
+  "type": ["Electric", "Dark"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/morpeko.png"
+},
+{
+  "id":301,
+  "name":"Golett",
+  "type": ["Ground", "Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/golett.png"
+},
+{
+  "id":302,
+  "name": "Golurk",
+  "type": ["Ground", "Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/golurk.png"
+},
+{
+"id":303,
+"name":"Rookidee",
+"type": ["Flying"],
+"sprite": "https://img.pokemondb.net/sprites/home/shiny/rookidee.png"
+},
+{
+  "id":304,
+  "name": "Corvisquire",
+  "type": ["Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/corvisquire.png"
+},
+{
+  "id":305,
+  "name": "Corviknight",
+  "type": ["Flying", "Steel"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/corviknight.png"
+},
+{
+  "id":306,
+  "name": "Igglybuff",
+  "type": ["Normal", "Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/igglybuff.png"
+},
+{
+  "id":307,
+  "name": "Jigglypuff",
+  "type": ["Normal", "Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/jigglypuff.png"
+},
+{
+  "id":308,
+  "name": "Wigglytuff",
+  "type": ["Normal", "Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/wigglytuff.png"
+},
+{
+  "id":309,
+  "name": "Fidough",
+  "type": ["Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/fidough.png"
+},
+{
+  "id":310,
+  "name":"Dachsbun",
+  "type": ["Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/dachsbun.png"
+},
+{
+  "id":311,
+  "name": "Starly",
+  "type": ["Normal", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/starly.png"
+},
+{
+  "id":312,
+  "name": "Staravia",
+  "type": ["Normal", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/staravia.png"
+},
+{
+  "id":313,
+  "name": "Staraptor",
+  "type": ["Normal", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/staraptor.png"
+},
+{
+  "id":314,
+  "name": "Spoink",
+  "type": ["Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/spoink.png"
+},
+{
+  "id":315,
+  "name": "Grumpig",
+  "type": ["Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/grumpig.png"
+},
+{
+  "id":316,
+  "name": "Squawkabilly",
+  "type": ["Normal", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/squawkabilly.png"
+},
+{
+  "id":317,
+  "name": "Crabrawler",
+  "type": ["Fighting"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/crabrawler.png"
+},
+{
+  "id":318,
+  "name": "Crabominable",
+  "type": ["Fighting", "Ice"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/crabominable.png"
+},
+{
+  "id": 319,
+  "name": "Nacli",
+  "type": ["Rock"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/nacli.png"
+},
+{
+  "id": 320,
+  "name": "Naclstack",
+  "type": ["Rock"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/naclstack.png"
+},
+{
+  "id": 321,
+  "name": "Garganacl",
+  "type": ["Rock"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/garganacl.png"
+},
+{
+  "id": 322,
+  "name": "Gulpin",
+  "type": ["Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/gulpin.png"
+},
+{
+  "id": 323,
+  "name": "Swalot",
+  "type": ["Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/swalot.png"
+},
+{
+  "id": 324,
+  "name": "Zubat",
+  "type": ["Poison", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/zubat.png"
+},
+{
+  "id": 325,
+  "name": "Golbat",
+  "type": ["Poison", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/golbat.png"
+},
+{
+  "id": 326,
+  "name": "Crobat",
+  "type": ["Poison", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/crobat.png"
+},
+{
+  "id": 327,
+  "name": "Charcadet",
+  "type": ["Fire"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/charcadet.png"
+},
+{
+  "id": 328,
+  "name": "Armarouge",
+  "type": ["Fire", "Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/armarouge.png"
+},
+{
+  "id": 329,
+  "name": "Ceruledge",
+  "type": ["Fire", "Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/ceruledge.png"
+},
+{
+  "id": 330,
+  "name": "Maschiff",
+  "type": ["Dark"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/maschiff.png"
+},
+{
+  "id": 331,
+  "name": "Mabosstiff",
+  "type": ["Dark"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/mabosstiff.png"
+},
+{
+  "id": 332,
+  "name": "Toxel",
+  "type": ["Electric", "Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/toxel.png"
+},
+{
+  "id": 333,
+  "name": "Toxtricity (Amped Form)",
+  "type": ["Electric", "Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/toxtricity-amped.png"
+},
+{
+  "id": 334,
+  "name": "Shroodle",
+  "type": ["Poison", "Normal"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/shroodle.png"
+},
+{
+  "id": 335,
+  "name": "Grafaiai",
+  "type": ["Poison", "Normal"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/grafaiai.png"
+},
+{
+  "id": 336,
+  "name": "Zangoose",
+  "type": ["Normal"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/zangoose.png"
+},
+{
+  "id": 337,
+  "name": "Seviper",
+  "type": ["Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/seviper.png"
+},
+{
+  "id": 338,
+  "name": "Mime Jr.",
+  "type": ["Psychic", "Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/mime-jr.png"
+},
+{
+  "id": 339,
+  "name": "Mr. Mime",
+  "type": ["Psychic", "Fairy"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/mr-mime.png"
+},
+{
+  "id": 340,
+  "name": "Mr. Rime",
+  "type": ["Ice", "Psychic"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/mr-rime.png"
+},
+{
+  "id": 341,
+  "name": "Foongus",
+  "type": ["Grass", "Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/foongus.png"
+},
+{
+  "id": 342,
+  "name": "Amoonguss",
+  "type": ["Grass", "Poison"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/amoonguss.png"
+},
+{
+  "id": 343,
+  "name": "Heatran",
+  "type": ["Fire", "Steel"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/heatran.png"
+},
+{
+  "id": 344,
+  "name": "Marshadow",
+  "type": ["Fighting", "Ghost"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/marshadow.png"
+},
+{
+  "id": 345,
+  "name": "Darkrai",
+  "type": ["Dark"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/darkrai.png"
+},
+{
+  "id": 346,
+  "name": "Kyogre",
+  "type": ["Water"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/kyogre.png"
+},
+{
+  "id": 347,
+  "name": "Groudon",
+  "type": ["Ground"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/groudon.png"
+},
+{
+  "id": 348,
+  "name": "Rayquaza",
+  "type": ["Dragon", "Flying"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/rayquaza.png"
+},
+{
+  "id": 349,
+  "name": "Zeraora",
+  "type": ["Electric"],
+  "sprite": "https://img.pokemondb.net/sprites/home/shiny/zeraora.png"
+}
 ]
