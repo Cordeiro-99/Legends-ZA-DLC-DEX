@@ -1,17 +1,15 @@
-// server/server.js
 require('dotenv').config();
 const express = require('express');
-const app = express();
-const cors = require('cors');
-const db = require('./db'); // mongoose connection
-const authRoutes = require('./routes/auth');
-const pokedexRoutes = require('./routes/pokedex');
+const connectDB = require('./db');
 
-app.use(cors());
+connectDB();
+
+const app = express();
 app.use(express.json());
 
-app.use('/api/auth', authRoutes);
-app.use('/api/pokedex', pokedexRoutes);
+app.listen(4001, () => {
+  console.log('Server running on port 4001');
+});
 
-const PORT = process.env.PORT || 4001;
-app.listen(PORT, ()=> console.log('Server running on port', PORT));
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);
