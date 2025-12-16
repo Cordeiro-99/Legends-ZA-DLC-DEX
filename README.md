@@ -1,4 +1,4 @@
-# Pokedextracker - Versão base dados
+# Pokedextracker - Versão user (com Login+Registo)
 
 ## Setup
 
