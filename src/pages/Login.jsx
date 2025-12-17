@@ -6,35 +6,97 @@ import "../login.css";
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { saveAuth } = useContext(AuthContext);
+  const { user, saveAuth } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // NÃO USE useEffect para redirecionar aqui!
+  // Deixe isso para as rotas principais
+
   const submit = async (e) => {
     e.preventDefault();
+    console.log('🟡 SUBMIT - Login com:', username);
+    
     setLoading(true);
     setError(null);
     
     try {
-      const res = await api.login(username, password);
-      if(res.token) {
-        saveAuth(res.user, res.token);
-      } else {
-        setError(res.error || 'Login failed');
+      const result = await api.login(username, password);
+      console.log('🟡 RESULTADO API:', result);
+      
+      if (result.token && result.user) {
+        console.log('✅ LOGIN BEM-SUCEDIDO');
+        saveAuth(result.user, result.token);
+        
+        // Redirecionamento SIMPLES e DIRETO
+        window.location.href = '/';
+        return;
+      } 
+      else if (result.error) {
+        console.log('❌ ERRO DA API:', result.error);
+        setError(result.error);
       }
+      else if (result.message) {
+        console.log('❌ MENSAGEM DA API:', result.message);
+        setError(result.message);
+      }
+      else {
+        setError('Login falhou');
+      }
+      
     } catch (err) {
-      setError('An error occurred. Please try again.');
+      console.error('🔥 ERRO:', err);
+      setError('Erro de conexão');
     } finally {
       setLoading(false);
     }
   };
+
+  // Se já estiver logado, mostra mensagem
+  if (user) {
+    return (
+      <div className="login-container">
+        <div className="login-card">
+          <div className="login-header">
+            <h2>Já está logado!</h2>
+            <p>Você já está autenticado como: <strong>{user.username}</strong></p>
+          </div>
+          
+          <div style={{ textAlign: 'center', padding: '20px' }}>
+            <p>Você será redirecionado automaticamente...</p>
+            <button 
+              onClick={() => window.location.href = '/'}
+              className="submit-button"
+              style={{ marginTop: '10px' }}
+            >
+              Ir para a Página Principal
+            </button>
+            <button 
+              onClick={() => {
+                localStorage.clear();
+                window.location.reload();
+              }}
+              className="submit-button"
+              style={{ 
+                marginTop: '10px', 
+                backgroundColor: '#ff4444',
+                marginLeft: '10px'
+              }}
+            >
+              Sair
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="login-container">
       <div className="login-card">
         <div className="login-header">
           <h2>Bem vindo</h2>
-          <p>Faça login para continuar</p>
+          <p>Faça login para continuar</p>
         </div>
         
         <form onSubmit={submit} className="login-form">
@@ -48,6 +110,7 @@ export default function Login() {
               className="form-input"
               placeholder="Insere o username"
               required
+              disabled={loading}
             />
           </div>
           
@@ -62,6 +125,7 @@ export default function Login() {
                 className="form-input"
                 placeholder="Insere a password"
                 required
+                disabled={loading}
               />
             </div>
           </div>
@@ -69,9 +133,9 @@ export default function Login() {
           <button 
             type="submit" 
             className="submit-button"
-            disabled={loading}
+            disabled={loading || !username || !password}
           >
-            {loading ? 'Logging in...' : 'Login'}
+            {loading ? 'A fazer login...' : 'Login'}
           </button>
           
           {error && (

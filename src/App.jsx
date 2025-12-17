@@ -1,17 +1,26 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-
+import { useContext } from "react"
+import { AuthContext } from "./context/AuthContext"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Home from "./Home"
 import ProtectedRoute from "./components/ProtectedRoute"
 
+// Componente para rota raiz inteligente
+function RootRoute() {
+  const { user } = useContext(AuthContext)
+  
+  // Se estiver logado, vai para pokedex
+  // Se não estiver, vai para login
+  return <Navigate to={user ? "/pokedex" : "/login"} />
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-
-        {/* rota inicial */}
-        <Route path="/" element={<Navigate to="/login" />} />
+        {/* Rota raiz inteligente */}
+        <Route path="/" element={<RootRoute />} />
 
         {/* auth */}
         <Route path="/login" element={<Login />} />
@@ -28,8 +37,7 @@ export default function App() {
         />
 
         {/* fallback */}
-        <Route path="*" element={<Navigate to="/login" />} />
-
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   )

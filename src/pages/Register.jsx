@@ -245,7 +245,7 @@ export default function Register() {
             className="submit-button"
             disabled={loading || passwordStrength.score < 3}
           >
-            {loading ? 'Creating Account...' : 'Create Account'}
+            {loading ? 'Criando a conta...' : 'Criar conta'}
           </button>
           
           {error && (
