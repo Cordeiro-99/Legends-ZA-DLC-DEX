@@ -113,9 +113,6 @@ export default function Home() {
               <div className="text-gray-300">
                 Bem-vindo, <span className="font-bold text-yellow-300">{user?.username}</span>
               </div>
-              <div className="text-xs bg-gray-800/50 px-2 py-1 rounded text-gray-400">
-                ID: {user?.id?.substring(0, 8)}...
-              </div>
               <div className="text-xs bg-blue-900/50 px-2 py-1 rounded text-blue-300">
                 Dex: {currentDex}
               </div>

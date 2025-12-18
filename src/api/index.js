@@ -1,9 +1,6 @@
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
 
-// DEBUG: Mostrar a URL base
-console.log('🔗 API Config:');
-console.log('🔗 VITE_API_URL:', import.meta.env.VITE_API_URL);
-console.log('🔗 API_BASE final:', API_BASE);
+
 
 export async function register(username, password) {
   console.log('📡 [REGISTER] Chamando:', { username });
