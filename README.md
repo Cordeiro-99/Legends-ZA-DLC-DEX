@@ -9,17 +9,6 @@ O Legends-ZA-DLC-DEX é um projeto de um Pokédex tracker focado no jogo Pokémo
 - **Controlo de Captura:** Marque os Pokémon que já capturou e acompanhe o seu progresso.
 - **Interface Intuitiva:** Design simples e fácil de usar para uma navegação fluida.
 
-## Tecnologias Utilizadas
-
-O projeto foi desenvolvido com as seguintes tecnologias:
-
-| Tecnologia | Descrição |
-|---|---|
-| **React** | Biblioteca JavaScript para a construção da interface de utilizador. |
-| **Vite** | Ferramenta de build para um desenvolvimento front-end mais rápido. |
-| **Tailwind CSS** | Framework de CSS para a estilização da aplicação. |
-| **Node.js** | Ambiente de execução para o servidor back-end. |
-| **React Router** | Para a gestão de rotas na aplicação. |
 
 ## Como Começar
 
@@ -57,33 +46,9 @@ Certifique-se que tem o [Node.js](https://nodejs.org/) instalado na sua máquina
    ```
 3. Abra o seu navegador e aceda a `http://localhost:5173`.
 
-## Estrutura do Projeto
-
-A estrutura de ficheiros do projeto está organizada da seguinte forma:
-
-```
-/Legends-ZA-DLC-DEX
-|-- /node_modules
-|-- /server
-|   |-- server.js
-|-- /src
-|   |-- /api
-|   |-- /components
-|   |-- /context
-|   |-- /data
-|   |-- /pages
-|   |-- App.jsx
-|   |-- main.jsx
-|-- .gitignore
-|-- index.html
-|-- package.json
-|-- README.md
-```
 
 ## Contribuições
 
 As contribuições são bem-vindas! Se tiver alguma sugestão ou encontrar algum problema, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
 
-## Licença
 
-Este projeto não possui uma licença definida.
