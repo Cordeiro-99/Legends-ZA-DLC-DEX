@@ -12,7 +12,7 @@ const allTypes = [
   { value: 'Flying', label: '🕊️ Flying' },
   { value: 'Psychic', label: '🔮 Psychic' },
   { value: 'Bug', label: '🐛 Bug' },
-  { value: 'Rock', label: '🪨 Rock' },  // ✅ Corrigido
+  { value: 'Rock', label: '🪨 Rock' },  
   { value: 'Ghost', label: '👻 Ghost' },
   { value: 'Dark', label: '🌑 Dark' },
   { value: 'Dragon', label: '🐉 Dragon' },
