@@ -4,15 +4,24 @@ import * as api from '../api';
 import "../login.css";
 
 export default function Login() {
+   // Credenciais introduzidas pelo utilizador
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+    // Contexto de autenticação global
   const { user, saveAuth } = useContext(AuthContext);
+
+    // Estados auxiliares
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // NÃO USE useEffect para redirecionar aqui!
-  // Deixe isso para as rotas principais
-
+/**
+   * Função executada ao submeter o formulário de login
+   * - Valida o submit
+   * - Chama a API
+   * - Guarda o token e utilizador
+   * - Redireciona para a página principal
+   */
   const submit = async (e) => {
     e.preventDefault();
     console.log('🟡 SUBMIT - Login com:', username);
@@ -21,17 +30,20 @@ export default function Login() {
     setError(null);
     
     try {
+      // Pedido de login á API
       const result = await api.login(username, password);
       console.log('🟡 RESULTADO API:', result);
       
+      // Login bem-sucedido
       if (result.token && result.user) {
         console.log('✅ LOGIN BEM-SUCEDIDO');
         saveAuth(result.user, result.token);
         
-        // Redirecionamento SIMPLES e DIRETO
+        // Redirecionamento simples após login
         window.location.href = '/';
         return;
       } 
+            // Erros vindos da API
       else if (result.error) {
         console.log('❌ ERRO DA API:', result.error);
         setError(result.error);
@@ -45,6 +57,7 @@ export default function Login() {
       }
       
     } catch (err) {
+      // Erro de conexão ou inesperado
       console.error('🔥 ERRO:', err);
       setError('Erro de conexão');
     } finally {
@@ -90,7 +103,7 @@ export default function Login() {
       </div>
     );
   }
-
+    //Formulário de login
   return (
     <div className="login-container">
       <div className="login-card">
