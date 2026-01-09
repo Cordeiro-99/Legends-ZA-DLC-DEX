@@ -4,21 +4,26 @@ import * as api from '../api';
 import { useNavigate, Link } from 'react-router-dom';
 import "../register.css";
 
+//Dados do formulário de registo
 export default function Register() {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
     confirmPassword: ''
   });
+  // Controlo de visibibilidade de passwords
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  // Estados auxiliares
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
+  // Contexto de autenticação
   const { saveAuth } = useContext(AuthContext);
+  // Navegação programática
   const navigate = useNavigate();
 
-  // Validação de senha
+   // Estado que guarda a força da password
   const [passwordStrength, setPasswordStrength] = useState({
     score: 0,
     hasMinLength: false,
@@ -28,6 +33,10 @@ export default function Register() {
     hasSpecialChar: false
   });
 
+    /**
+   * Valida a password introduzida
+   * Atualiza os critérios e a pontuação geral
+   */
   const validatePassword = (password) => {
     const validations = {
       hasMinLength: password.length >= 8,
@@ -45,10 +54,14 @@ export default function Register() {
     });
   };
 
+  // Revalida a password sempre que o user escreve
   useEffect(() => {
     validatePassword(formData.password);
   }, [formData.password]);
 
+  /**
+   * Retorna o texto da força da password
+   */
   const getPasswordStrengthText = () => {
     if (passwordStrength.score <= 2) return 'Weak';
     if (passwordStrength.score <= 4) return 'Medium';
@@ -61,6 +74,9 @@ export default function Register() {
     return 'strength-strong';
   };
 
+    
+   //Atualiza os valores do formulário
+   
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -102,16 +118,18 @@ export default function Register() {
     return true;
   };
 
+  // Submissão do formulário de registo
   const submit = async (e) => {
     e.preventDefault();
     setError(null);
     setSuccess(null);
-
+// Validação final
     if (!validateForm()) return;
 
     setLoading(true);
     
     try {
+      //Pedio de registo de API
       const res = await api.register(formData.username, formData.password);
       
       if (res.token) {
