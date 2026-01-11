@@ -47,9 +47,10 @@ Certifique-se que tem o [Node.js](https://nodejs.org/) instalado na sua máquina
 3. Abra o seu navegador e aceda a `http://localhost:5173`.
 
 ## Próximo passo 
-Adicionar hosting 24/7 
+Adicionar hosting 24/7.
 Adicionar página para ver perfil de user.
-Adicionar Dashboard para quem é admin 
+Adicionar Dashboard para quem é admin.
+Botão para selecionar uma quantidade de pokemons ao mesmo tempo e marca-los como capturados.
 
 ## Contribuições
 
