@@ -9,6 +9,10 @@ const UserSchema = new mongoose.Schema({
   passwordHash: {
     type: String,
     required: true
+  },
+  pokedex: {
+    type: Object,
+    default: {}
   }
 });
 
