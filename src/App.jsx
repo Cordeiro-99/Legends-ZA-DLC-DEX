@@ -5,6 +5,9 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Home from "./Home"
 import ProtectedRoute from "./components/ProtectedRoute"
+import Profile from "./pages/Profile";
+
+
 
 // Componente para rota raiz inteligente
 function RootRoute() {
@@ -38,6 +41,15 @@ export default function App() {
 
         {/* fallback */}
         <Route path="*" element={<Navigate to="/" />} />
+        <Route
+  path="/profile"
+  element={
+    <ProtectedRoute>
+      <Profile />
+    </ProtectedRoute>
+  }
+/>
+
       </Routes>
     </BrowserRouter>
   )
