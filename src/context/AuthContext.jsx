@@ -1,62 +1,84 @@
-import React, { createContext, useState, useEffect } from 'react';
-import * as api from '../api';
+import React, { createContext, useState, useEffect } from 'react'
+import * as api from '../api'
 
-export const AuthContext = createContext();
+export const AuthContext = createContext()
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(()=> {
-    try {
-      const data = localStorage.getItem('auth');
-      return data ? JSON.parse(data).user : null;
-    } catch { return null; }
-  });
-  const [token, setToken] = useState(()=> {
-    try { const data = localStorage.getItem('auth'); return data? JSON.parse(data).token : null; } catch { return null; }
-  });
-  const [pokedex, setPokedex] = useState(()=> {
-    try { const data = localStorage.getItem('pokedex'); return data? JSON.parse(data) : {}; } catch { return {}; }
-  });
+  const [user, setUser] = useState(null)
+  const [token, setToken] = useState(null)
+  const [pokedex, setPokedex] = useState({})
 
-  useEffect(()=> {
-    if(token) {
-      // fetch server pokedex and merge
-      api.fetchPokedex(token).then(res => {
-        if(res.pokedex) {
-          setPokedex(prev => {
-            const merged = { ...prev, ...res.pokedex };
-            localStorage.setItem('pokedex', JSON.stringify(merged));
-            return merged;
-          });
-        }
-      });
+  // 🔹 Carregar auth ao iniciar
+  useEffect(() => {
+    const stored = localStorage.getItem('auth')
+    if (stored) {
+      const parsed = JSON.parse(stored)
+      setUser(parsed.user)
+      setToken(parsed.token)
     }
-  }, [token]);
+  }, [])
+
+  // 🔹 Buscar pokedex do servidor SEMPRE que houver token
+  useEffect(() => {
+    if (!token) return
+
+    api.fetchPokedex(token)
+      .then(res => {
+        if (res?.pokedex) {
+          setPokedex(res.pokedex)
+        }
+      })
+      .catch(() => {
+        setPokedex({})
+      })
+  }, [token])
 
   const saveAuth = (userObj, tokenStr) => {
-    setUser(userObj);
-    setToken(tokenStr);
-    localStorage.setItem('auth', JSON.stringify({ user: userObj, token: tokenStr }));
-  };
+    setUser(userObj)
+    setToken(tokenStr)
+    localStorage.setItem(
+      'auth',
+      JSON.stringify({ user: userObj, token: tokenStr })
+    )
+  }
 
   const logout = () => {
-    setUser(null);
-    setToken(null);
-    localStorage.removeItem('auth');
-  };
+    setUser(null)
+    setToken(null)
+    setPokedex({})
+    localStorage.removeItem('auth')
+  }
 
+  // 🔹 Toggle REAL (frontend + backend)
   const toggleCaught = async (pokemonId) => {
     setPokedex(prev => {
-      const next = {...prev, [pokemonId]: !prev[pokemonId]};
-      localStorage.setItem('pokedex', JSON.stringify(next));
-      // push update to server if logged in
-      if(token) {
-        api.updatePokedex(token, { [pokemonId]: next[pokemonId] }).catch(err=> console.error(err));
+      const next = {
+        ...prev,
+        [pokemonId]: !prev[pokemonId]
       }
-      return next;
-    });
-  };
 
-  return <AuthContext.Provider value={{ user, token, pokedex, saveAuth, logout, toggleCaught }}>
-    {children}
-  </AuthContext.Provider>
+      if (token) {
+        api.updatePokedex(token, {
+          [pokemonId]: next[pokemonId]
+        }).catch(() => {})
+      }
+
+      return next
+    })
+  }
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        token,
+        pokedex,
+        saveAuth,
+        logout,
+        toggleCaught
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  )
 }
