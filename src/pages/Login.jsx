@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import * as api from '../api';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import "../login.css";
 
 export default function Login() {
@@ -14,6 +16,18 @@ export default function Login() {
     // Estados auxiliares
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+useEffect(() => {
+  if (user) {
+    const timer = setTimeout(() => {
+      navigate('/pokedex');
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }
+}, [user, navigate]);
 
 /**
    * Função executada ao submeter o formulário de login
@@ -82,7 +96,7 @@ export default function Login() {
               className="submit-button"
               style={{ marginTop: '10px' }}
             >
-              Ir para a Página Principal
+              Ir para a Pokedex
             </button>
             <button 
               onClick={() => {
