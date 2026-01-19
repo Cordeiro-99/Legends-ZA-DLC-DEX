@@ -7,18 +7,26 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [token, setToken] = useState(null)
   const [pokedex, setPokedex] = useState({})
+  const [loading, setLoading] = useState(true) // 🔹 FUNDAMENTAL
 
-  // 🔹 Carregar auth ao iniciar
+  // 🔹 Carregar auth ao iniciar (ANTES de decidir rotas)
   useEffect(() => {
-    const stored = localStorage.getItem('auth')
-    if (stored) {
-      const parsed = JSON.parse(stored)
-      setUser(parsed.user)
-      setToken(parsed.token)
+    try {
+      const stored = localStorage.getItem('auth')
+
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        setUser(parsed.user)
+        setToken(parsed.token)
+      }
+    } catch (err) {
+      console.error('Erro a restaurar auth:', err)
+    } finally {
+      setLoading(false) // 👈 só aqui termina o loading
     }
   }, [])
 
-  // 🔹 Buscar pokedex do servidor SEMPRE que houver token
+  // 🔹 Buscar pokedex do servidor quando houver token
   useEffect(() => {
     if (!token) return
 
@@ -36,6 +44,7 @@ export function AuthProvider({ children }) {
   const saveAuth = (userObj, tokenStr) => {
     setUser(userObj)
     setToken(tokenStr)
+
     localStorage.setItem(
       'auth',
       JSON.stringify({ user: userObj, token: tokenStr })
@@ -73,6 +82,7 @@ export function AuthProvider({ children }) {
         user,
         token,
         pokedex,
+        loading,        // 👈 EXPORTAR loading
         saveAuth,
         logout,
         toggleCaught
