@@ -75,8 +75,8 @@ export default function Login() {
             <p>Você já está autenticado como: <strong>{user.username}</strong></p>
           </div>
           
-          <div style={{ textAlign: 'center', padding: '20px' }}>
-            <p>Você será redirecionado automaticamente...</p>
+          <div style={{ textAlign: 'center', padding: '20px'  }}>
+              <p style={{ color: '#332C23' }}> Você será redirecionado automaticamente... </p>
             <button 
               onClick={() => window.location.href = '/'}
               className="submit-button"
