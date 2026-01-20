@@ -1,7 +1,5 @@
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
 
-
-
 export async function register(username, password) {
   console.log('📡 [REGISTER] Chamando:', { username });
   
@@ -100,6 +98,15 @@ export async function fetchPokedex(token) {
     const data = await res.json();
     console.log('📡 [POKEDEX] Resposta:', data);
     
+    // Garantir que todas as chaves de Pokédex existem
+    if (data?.pokedex) {
+      data.pokedex = {
+        'legends-za': data.pokedex['legends-za'] || {},
+        'national-dex': data.pokedex['national-dex'] || {},
+        'shiny-dex': data.pokedex['shiny-dex'] || {}
+      };
+    }
+    
     return data;
   } catch (error) {
     console.error('📡 [POKEDEX] Erro:', error);
@@ -107,20 +114,23 @@ export async function fetchPokedex(token) {
   }
 }
 
-export async function updatePokedex(token, pokedex) {
+export async function updatePokedex(token, pokedexUpdates) {
   console.log('📡 [UPDATE POKEDEX] Chamando:', { 
     hasToken: !!token,
-    pokedexKeys: Object.keys(pokedex)
+    updates: pokedexUpdates,
+    dexKeys: Object.keys(pokedexUpdates)
   });
   
   try {
+    // Envia apenas as atualizações para o servidor
+    // pokedexUpdates deve ser algo como: { 'legends-za': { '25': true } }
     const res = await fetch(API_BASE + '/pokedex/update', {
       method: 'PUT',
       headers: { 
         'Content-Type':'application/json', 
         Authorization: 'Bearer ' + token 
       },
-      body: JSON.stringify({ pokedex })
+      body: JSON.stringify({ pokedex: pokedexUpdates })
     });
     
     console.log('📡 [UPDATE POKEDEX] Status:', res.status);
@@ -130,6 +140,64 @@ export async function updatePokedex(token, pokedex) {
     return data;
   } catch (error) {
     console.error('📡 [UPDATE POKEDEX] Erro:', error);
+    throw error;
+  }
+}
+
+// Funções para perfil do usuário
+export async function fetchUserProfile(token, dex = 'legends-za') {
+  console.log('📡 [PROFILE] Fetch profile para dex:', dex);
+  
+  try {
+    const res = await fetch(`${API_BASE}/user/profile?dex=${dex}`, {
+      headers: { Authorization: 'Bearer ' + token }
+    });
+    
+    console.log('📡 [PROFILE] Status:', res.status);
+    const data = await res.json();
+    console.log('📡 [PROFILE] Resposta:', data);
+    
+    return data;
+  } catch (error) {
+    console.error('📡 [PROFILE] Erro:', error);
+    throw error;
+  }
+}
+
+export async function fetchAllUserProfiles(token) {
+  console.log('📡 [PROFILE ALL] Fetch todas as dex');
+  
+  try {
+    const res = await fetch(`${API_BASE}/user/profile/all`, {
+      headers: { Authorization: 'Bearer ' + token }
+    });
+    
+    console.log('📡 [PROFILE ALL] Status:', res.status);
+    const data = await res.json();
+    console.log('📡 [PROFILE ALL] Resposta:', data);
+    
+    return data;
+  } catch (error) {
+    console.error('📡 [PROFILE ALL] Erro:', error);
+    throw error;
+  }
+}
+
+export async function fetchDexList(token) {
+  console.log('📡 [DEX LIST] Fetch lista de dex');
+  
+  try {
+    const res = await fetch(`${API_BASE}/user/profile/dex-list`, {
+      headers: { Authorization: 'Bearer ' + token }
+    });
+    
+    console.log('📡 [DEX LIST] Status:', res.status);
+    const data = await res.json();
+    console.log('📡 [DEX LIST] Resposta:', data);
+    
+    return data;
+  } catch (error) {
+    console.error('📡 [DEX LIST] Erro:', error);
     throw error;
   }
 }
