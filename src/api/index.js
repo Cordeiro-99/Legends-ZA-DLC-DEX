@@ -1,9 +1,10 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const API_URL =
+  (import.meta.env.VITE_API_URL || 'http://localhost:4000').replace(/\/$/, '');
 
 // DEFINE API_BASE para evitar o erro de variável undefined
 const API_BASE = API_URL;
 
-// Debug: mostra qual URL está sendo usada
+
 console.log('🔧 [DEBUG] API_BASE:', API_BASE);
 console.log('🔧 [DEBUG] VITE_API_URL:', import.meta.env.VITE_API_URL);
 
