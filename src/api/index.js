@@ -11,7 +11,7 @@ console.log('🔧 [DEBUG] VITE_API_URL:', import.meta.env.VITE_API_URL);
 
 export async function register(username, password) {
   console.log('📡 [REGISTER] Chamando:', { username });
-  console.log('📡 [REGISTER] URL completa:', `${API_BASE}/auth/register`);
+  console.log('📡 [REGISTER] URL completa:', `${API_BASE}api/auth/register`);
   
   try {
     const res = await fetch(`${API_BASE}/auth/register`, {
@@ -48,7 +48,7 @@ export async function login(username, password) {
   try {
     const startTime = Date.now();
     
-    const res = await fetch(`${API_BASE}/auth/login`, {
+    const res = await fetch(`${API_BASE}api/auth/login`, {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({ username, password })
@@ -110,7 +110,7 @@ export async function fetchPokedex(token) {
   console.log('📡 [POKEDEX] URL completa:', `${API_BASE}/pokedex`);
   
   try {
-    const res = await fetch(`${API_BASE}/pokedex`, {
+    const res = await fetch(`${API_BASE}api/pokedex`, {
       headers: { Authorization: 'Bearer ' + token }
     });
     
@@ -186,7 +186,7 @@ export async function fetchUserProfile(token, dex = 'legends-za') {
   console.log('📡 [PROFILE] URL completa:', `${API_BASE}/user/profile?dex=${dex}`);
   
   try {
-    const res = await fetch(`${API_BASE}/user/profile?dex=${dex}`, {
+    const res = await fetch(`${API_BASE}api/user/profile?dex=${dex}`, {
       headers: { Authorization: 'Bearer ' + token }
     });
     
@@ -212,7 +212,7 @@ export async function fetchAllUserProfiles(token) {
   console.log('📡 [PROFILE ALL] URL completa:', `${API_BASE}/user/profile/all`);
   
   try {
-    const res = await fetch(`${API_BASE}/user/profile/all`, {
+    const res = await fetch(`${API_BASE}api/user/profile/all`, {
       headers: { Authorization: 'Bearer ' + token }
     });
     
