@@ -7,9 +7,6 @@ const API_BASE = API_URL;
 console.log('🔧 [DEBUG] API_BASE:', API_BASE);
 console.log('🔧 [DEBUG] VITE_API_URL:', import.meta.env.VITE_API_URL);
 
-const api = axios.create({
-  baseURL: API_URL,
-});
 
 export async function register(username, password) {
   console.log('📡 [REGISTER] Chamando:', { username });
