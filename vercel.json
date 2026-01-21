@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/register/:path*", "destination": "https://your-render-app.onrender.com/register/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
