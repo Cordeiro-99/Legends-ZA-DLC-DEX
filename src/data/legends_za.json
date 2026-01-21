@@ -1495,9 +1495,9 @@
   },
   {
     "id":250,
-    "name": "Tinkatonk",
+    "name": "Tinkaton",
     "type": ["Steel", "Fairy"],
-    "sprite": "https://img.pokemondb.net/sprites/home/shiny/tinkatonk.png"
+    "sprite": "https://img.pokemondb.net/sprites/home/shiny/tinkaton.png"
   },
   {"id":251,
   "name": "Cyclizar",
