@@ -138,7 +138,7 @@ export default function Register() {
         
         // Redirecionar após 2 segundos
         setTimeout(() => {
-          navigate('/dashboard');
+          navigate('/pokedex');
         }, 2000);
       } else {
         setError(res.error || 'Registration failed. Please try again.');
