@@ -11,10 +11,10 @@ A aplicação permite aos utilizadores registarem-se, fazerem login e acompanhar
 ## 📸 Screenshots
 
 ### Pokédex
-![Pokédex Screenshot](public/inicial.png)
+![Pokédex Screenshot](public/inicial.PNG)
 
 ### Perfil / Progresso do Utilizador
-![Perfil Screenshot](public/perfil.png)
+![Perfil Screenshot](public/perfil.PNG)
 
 ---
 
