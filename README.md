@@ -11,7 +11,7 @@ A aplicação permite aos utilizadores registarem-se, fazerem login e acompanhar
 ## 📸 Screenshots
 
 ### Página de login
-![Pokédex Screenshot](public/inicial.PNG)
+![Pokédex Screenshot](public/login.PNG)
 
 ### Pokédex
 ![Pokédex Screenshot](public/pokedex.PNG)
