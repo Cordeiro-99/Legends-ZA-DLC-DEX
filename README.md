@@ -1,53 +1,49 @@
 # Legends-ZA-DLC-DEX
 
-O Legends-ZA-DLC-DEX é um projeto de um Pokédex tracker focado no jogo Pokémon Legends: Z-A, incluindo o conteúdo do DLC. A aplicação permite aos utilizadores registarem-se, fazerem login e acompanharem os Pokémon que já capturaram.
+O **Legends-ZA-DLC-DEX** é um projeto de um **Pokédex tracker** focado no jogo **Pokémon Legends: Z-A**, incluindo o conteúdo do DLC.  
+A aplicação permite aos utilizadores registarem-se, fazerem login e acompanharem os Pokémon que já capturaram.
 
-## Funcionalidades
+🌐 **Projeto Online:**  
+👉 https://legends-za-dlc-dex.vercel.app/pokedex?dex=legends-za
 
-- **Registo e Login de Utilizadores:** Sistema de autenticação seguro para que cada utilizador tenha a sua própria lista de Pokémon.
-- **Pokédex Completa:** Lista de todos os Pokémon disponíveis no jogo base e no DLC.
-- **Controlo de Captura:** Marque os Pokémon que já capturou e acompanhe o seu progresso.
-- **Interface Intuitiva:** Design simples e fácil de usar para uma navegação fluida.
+---
 
+## 📸 Screenshots
 
-## Como Começar
+### Pokédex
+![Pokédex Screenshot](public/inicial.png)
 
-Para executar o projeto localmente, siga os passos abaixo.
+### Perfil / Progresso do Utilizador
+![Perfil Screenshot](public/perfil.png)
 
-### Pré-requisitos
+---
 
-Certifique-se que tem o [Node.js](https://nodejs.org/) instalado na sua máquina.
+## 🚀 Funcionalidades
 
-### Instalação
+- **Registo e Login de Utilizadores**  
+  Sistema de autenticação para que cada utilizador tenha a sua própria conta.
 
-1. Clone o repositório:
-   ```sh
-   git clone https://github.com/Cordeiro-99/Legends-ZA-DLC-DEX.git
-   ```
-2. Navegue para o diretório do projeto:
-   ```sh
-   cd Legends-ZA-DLC-DEX
-   ```
-3. Instale as dependências:
-   ```sh
-   npm install
-   ```
+- **Pokédex Completa**  
+  Inclui todos os Pokémon disponíveis no jogo base e no DLC de *Pokémon Legends: Z-A* e duas  *Shiny e não shiny National Dex*
 
-### Execução
+- **Controlo de Captura**  
+  Possibilidade de marcar Pokémon como capturados e acompanhar o progresso geral.
 
-1. Inicie o servidor de desenvolvimento do Vite (front-end):
-   ```sh
-   npm run dev
-   ```
-2. Em outro terminal, inicie o servidor Node.js (back-end):
-   ```sh
-   cd server
-   node server.js
-   ```
-3. Abra o seu navegador e aceda a `http://localhost:5173`.
+- **Perfil de Utilizador**  
+  Visualização do progresso individual na Pokédex.
 
-## Contribuições
+- **Interface Intuitiva**  
+  Design simples, responsivo e fácil de usar.
 
-As contribuições são bem-vindas! Se tiver alguma sugestão ou encontrar algum problema, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+---
 
+## 🛠️ Tecnologias Utilizadas
+
+- **Front-end:** React + Vite  
+- **Back-end:** Node.js + Express  
+- **Base de Dados:** MongoDB  
+- **Autenticação:** JWT  
+- **Deploy:** Vercel
+
+---
 
